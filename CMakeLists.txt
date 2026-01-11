@@ -26,7 +26,7 @@ add_custom_command(
         DEPENDS ${FRAG_SHADER}
 )
 
-add_executable(vulkan1 main.cpp ${VERT_SPV} ${FRAG_SPV})
+add_executable(vulkan1 main.cpp VulkanApp.cpp VulkanApp.hpp ${VERT_SPV} ${FRAG_SPV})
 
 target_include_directories(vulkan1 PRIVATE ${Vulkan_INCLUDE_DIRS} ${GLFW_INCLUDE_DIRS} ${GLM_INCLUDE_DIRS})
 target_link_libraries(vulkan1 PRIVATE Vulkan::Vulkan glfw)
